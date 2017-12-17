@@ -7,34 +7,51 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBox x:Name="amount_box" HorizontalAlignment="Left" Margin="144,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-0.117,0.458"/>
-        <TextBlock x:Name="Amount" HorizontalAlignment="Left" Margin="12,92,0,0" TextWrapping="Wrap" Text="Enter Amount" VerticalAlignment="Top"/>
-        <ComboBox x:Name="from_ComboBox" HorizontalAlignment="Left" Margin="144,161,0,0" VerticalAlignment="Top" Width="120" TabNavigation="Local" SelectedIndex="-1">
+    <Grid Background= "{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Image Source="Assets/background.jpg"/>
+        <TextBox x:Name="amount_box" HorizontalAlignment="Left" Margin="144,92,0,0" TextWrapping="Wrap" Text="0.00" 
+         GotFocus="amount_box_GotFocus"  VerticalAlignment="Top" Width="120" RenderTransformOrigin="-0.117,0.458" FontFamily="Tempus Sans ITC" FontSize="18"/>
+        <TextBlock x:Name="Amount" HorizontalAlignment="Left" Margin="12,92,0,0" TextWrapping="Wrap" Text="Enter Amount:" VerticalAlignment="Top" Foreground="WhiteSmoke" FontFamily="Tempus Sans ITC" Opacity="5" FontWeight="Bold" FontSize="18"/>
+        <ComboBox x:Name="from_ComboBox" HorizontalAlignment="Left" Margin="144,161,0,0" VerticalAlignment="Top" Width="120" TabNavigation="Local" SelectedIndex="-1" Background="Chocolate" FontFamily="Tempus Sans ITC" FontSize="18">
             <ComboBoxItem Content="Euro"/>
             <ComboBoxItem Content="US Dollar"/>
             <ComboBoxItem Content="Pound"/>
             <ComboBoxItem Content="Yen"/>
+            <ComboBoxItem Content="Yuan"/>
             <ComboBoxItem Content="Rupees"/>
+            <ComboBoxItem Content="Ruble"/>
+            <ComboBoxItem Content="Mexican Peso"/>
             <ComboBoxItem Content="Polish Złoty"/>
             <ComboBoxItem Content="Canadian Dollar"/>
+            <ComboBoxItem Content="Swiss Franc"/>
+            <ComboBoxItem Content="Swedish Krona"/>
             <ComboBoxItem Content="Australian Dollar"/>
         </ComboBox>
-        <ComboBox x:Name="to_ComboBox" HorizontalAlignment="Left" Margin="144,233,0,0" VerticalAlignment="Top" Width="120">
+        <ComboBox x:Name="to_ComboBox" HorizontalAlignment="Left" Margin="144,233,0,0" VerticalAlignment="Top" Width="120" Background="Chocolate" FontFamily="Tempus Sans ITC" FontSize="18">
             <ComboBoxItem Content="Euro" Foreground="Black"/>
             <ComboBoxItem Content="US Dollar"/>
             <ComboBoxItem Content="Pound"/>
             <ComboBoxItem Content="Yen"/>
+            <ComboBoxItem Content="Yuan"/>
             <ComboBoxItem Content="Rupees"/>
+            <ComboBoxItem Content="Ruble"/>
+            <ComboBoxItem Content="Mexican Peso"/>
             <ComboBoxItem Content="Polish Złoty"/>
             <ComboBoxItem Content="Canadian Dollar"/>
+            <ComboBoxItem Content="Swiss Franc"/>
+            <ComboBoxItem Content="Swedish Krona"/>
             <ComboBoxItem Content="Australian Dollar"/>
         </ComboBox>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="12,161,0,0" TextWrapping="Wrap" Text="Convert From" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="12,233,0,0" TextWrapping="Wrap" Text="Convert To" VerticalAlignment="Top"/>
-        <TextBlock x:Name="converted_Amount" HorizontalAlignment="Left" Margin="12,303,0,0" TextWrapping="Wrap" Text="Converted Amount:" VerticalAlignment="Top"/>
-        <Button x:Name="convert_button" Content="Convert" HorizontalAlignment="Left" Margin="269,92,0,0" VerticalAlignment="Top" Height="32" Width="81" Click="convert_button_Click"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="12,161,0,0" TextWrapping="Wrap" Text="Convert From:" VerticalAlignment="Top" Foreground="WhiteSmoke" FontFamily="Tempus Sans ITC" FontWeight="Bold" FontSize="18"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="12,233,0,0" TextWrapping="Wrap" Text="Convert To:" VerticalAlignment="Top" Foreground="WhiteSmoke" FontFamily="Tempus Sans ITC" FontWeight="Bold" FontSize="18"/>
+        <TextBlock x:Name="converted_Amount" HorizontalAlignment="Left" Margin="12,303,0,0" TextWrapping="Wrap" Text="Converted Amount:" VerticalAlignment="Top" Foreground="WhiteSmoke" FontFamily="Tempus Sans ITC" FontWeight="Bold" FontSize="18"/>
+        <Button x:Name="convert_button" Content="Convert" FontFamily="Tempus Sans ITC" HorizontalAlignment="Left" Margin="269,92,0,0" VerticalAlignment="Top" Height="32" Width="132" Click="convert_button_Click" Background="Tomato" FontSize="18" FontWeight="Bold"/>
         <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="202,319,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <Button x:Name="reset_button" Content="Reset" HorizontalAlignment="Left" Margin="46,364,0,0" VerticalAlignment="Top" Click="button_Click"/>
+        <Button x:Name="reset_button" Content="Reset" HorizontalAlignment="Left" Margin="269,294,0,0" VerticalAlignment="Top" Click="button_Click" Background="Tomato" FontFamily="Tempus Sans ITC" Width="132" FontSize="18" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Center" Margin="150,10,290,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="200" FontFamily="Tempus Sans ITC" FontSize="28" Foreground="WhiteSmoke" FontWeight="Bold">
+            <Run FontSize="22" Text=" DG CONVERTER"/>
+            <LineBreak/>
+            <Run Text=""/>
+        </TextBlock>
     </Grid>
 </Page>
